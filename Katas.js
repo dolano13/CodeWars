@@ -13,3 +13,9 @@ function findSum(n) {
   }
   return answer;
 }
+
+//6.11.19
+//https://www.codewars.com/kata/beginner-lost-without-a-map/train/javascript
+function maps(x) {
+  return x.map(num => num * 2);
+}
