@@ -13,13 +13,11 @@ function findSum(n) {
   }
   return answer;
 }
-
 //6.11.19
 //https://www.codewars.com/kata/beginner-lost-without-a-map/train/javascript
 function maps(x) {
   return x.map(num => num * 2);
 }
-
 //6.12.19
 //https://www.codewars.com/kata/558fc85d8fd1938afb000014/train/javascript
 function sumTwoSmallestNumbers(numbers) {
@@ -59,4 +57,58 @@ function greet(language) {
     return greeting.english;
   }
 }
+//6.13
+//https://www.codewars.com/kata/even-or-odd/train/javascript
+function even_or_odd(number) {
+  if (number % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
 //https://www.codewars.com/kata/simple-multiplication/train/javascript
+function simpleMultiplication(number) {
+  if (number % 2 === 0) {
+    return number * 8;
+  } else {
+    return number * 9;
+  }
+}
+//https://www.codewars.com/kata/cat-years-dog-years/train/javascript
+let humanYearsCatYearsDogYears = function(humanYears) {
+  let CatYears = 0;
+  let DogYears = 0;
+
+  if (humanYears === 1) {
+    CatYears = 15;
+    DogYears = 15;
+  } else if (humanYears === 2) {
+    CatYears = 24;
+    DogYears = 24;
+  } else {
+    CatYears = 24 + (humanYears - 2) * 4;
+    DogYears = 24 + (humanYears - 2) * 5;
+  }
+  return [humanYears, CatYears, DogYears];
+};
+//https://www.codewars.com/kata/returning-strings/train/javascript
+function greet(name) {
+  return "Hello, " + name + " how are you doing today?";
+}
+//https://www.codewars.com/kata/keep-up-the-hoop/train/javascript
+function hoopCount(n) {
+  if (n >= 10) {
+    return "Great, now move on to tricks";
+  } else {
+    return "Keep at it until you get it";
+  }
+}
+//https://www.codewars.com/kata/how-good-are-you-really/train/javascript
+function betterThanAverage(classPoints, yourPoints) {
+  let classPointsavg = ([] + yourPoints) / classPoints.length;
+  if (classPointsavg < yourPoints) {
+    return true;
+  } else {
+    return false;
+  }
+}
