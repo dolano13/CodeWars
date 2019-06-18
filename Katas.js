@@ -145,3 +145,34 @@ var summation = function(num) {
   }
   return sum;
 };
+//6.17.19
+//https://www.codewars.com/kata/5899dc03bc95b1bf1b0000ad/train/javascript
+function invert(array) {
+  let newA = [];
+  for (x = 0; x <= array.length - 1; x++) {
+    if (array[x] > 0) {
+      newA[x] = array[x] - array[x] * 2;
+    } else newA[x] = Math.abs(array[x]);
+  }
+  return newA;
+}
+//https://www.codewars.com/kata/if-you-cant-sleep-just-count-sheep/train/javascript
+var countSheep = function(num) {
+  let sheep = "";
+  for (let i = 1; i <= num; i++) {
+    sheep += `${i} sheep...`;
+  }
+  return sheep;
+};
+//https://www.codewars.com/kata/5259b20d6021e9e14c0010d4/train/javascript
+function reverseWords(string) {
+  return string
+    .split(" ")
+    .map(function(word) {
+      return word
+        .split("")
+        .reverse()
+        .join("");
+    })
+    .join(" ");
+}
