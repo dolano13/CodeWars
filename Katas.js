@@ -225,3 +225,30 @@ function minMax(arr) {
     max = Math.max.apply(null, arr);
   return [min, max];
 }
+//6.25.19
+//https://www.codewars.com/kata/5648b12ce68d9daa6b000099/train/javascript
+var number = function(busStops) {
+  let ppl = 0;
+  for (let i = 0; i < busStops.length; i++) {
+    ppl += busStops[i][0];
+    ppl -= busStops[i][1];
+  }
+  return ppl;
+};
+//https://www.codewars.com/kata/disemvowel-trolls/train/javascript
+function disemvowel(str) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  return str
+    .split("")
+    .filter(function(el) {
+      return vowels.indexOf(el.toLowerCase()) == -1;
+    })
+    .join("");
+}
+//https://www.codewars.com/kata/vowel-count/train/javascript
+function getCount(str) {
+  let vwls = ["a", "e", "i", "o", "u"];
+  return str.split("").filter(letter => {
+    return vwls.includes(letter) ? true : false;
+  }).length;
+}
