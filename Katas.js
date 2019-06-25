@@ -176,3 +176,52 @@ function reverseWords(string) {
     })
     .join(" ");
 }
+//6.24.19
+//https://www.codewars.com/kata/57814d79a56c88e3e0000786/train/javascript
+function encrypt(text, n) {
+  let firstChar = "";
+  let secondChar = "";
+  let encrypted = text;
+  if (n <= 0 || text === null) {
+    return encrypted;
+  } else {
+    for (var i = 0; i < text.length; i++) {
+      if (i % 2) {
+        secondChar += text[i];
+      } else {
+        firstChar += text[i];
+      }
+    }
+    encrypted = secondChar + firstChar;
+    return encrypt(encrypted, n - 1);
+  }
+}
+
+encrypt(null, 2);
+
+function decrypt(encryptedText, n) {
+  let decrypted = encryptedText;
+  if (n <= 0 || encryptedText === null) {
+    return decrypted;
+  } else {
+    let midPoint = Math.floor(encryptedText.length / 2);
+    let secondChar = encryptedText.slice(0, midPoint);
+    let firstChar = encryptedText.slice(midPoint);
+    decrypted = "";
+    var stopLoop = firstChar.length;
+    for (var i = 0; i < stopLoop; i++) {
+      if (secondChar[i] === undefined) {
+        decrypted += firstChar[i];
+      } else {
+        decrypted += firstChar[i] + secondChar[i];
+      }
+    }
+    return decrypt(decrypted, n - 1);
+  }
+}
+//https://www.codewars.com/kata/the-highest-profit-wins/train/javascript
+function minMax(arr) {
+  let min = Math.min.apply(null, arr),
+    max = Math.max.apply(null, arr);
+  return [min, max];
+}
