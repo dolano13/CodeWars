@@ -252,3 +252,23 @@ function getCount(str) {
     return vwls.includes(letter) ? true : false;
   }).length;
 }
+//6.26.19
+//https://www.codewars.com/kata/563cf89eb4747c5fb100001b/train/javascript
+function removeSmallest(numbers) {
+  let newArray = [];
+  if (numbers.length > 1) {
+    let smallest = numbers[0];
+    for (i = 1; i < numbers.length; i++) {
+      if (numbers[i] < smallest) {
+        smallest = numbers[i];
+      }
+    }
+    for (x = 0; x < numbers.length; x++) {
+      if (x === numbers.indexOf(smallest)) {
+      } else {
+        newArray.push(numbers[x]);
+      }
+    }
+  }
+  return newArray;
+}
