@@ -272,6 +272,12 @@ function removeSmallest(numbers) {
   }
   return newArray;
 }
+//6.28.18
+//https://www.codewars.com/kata/578553c3a1b8d5c40300037c/train/javascript
+const binaryArrayToNumber = arr => {
+  return parseInt(Number(arr.join("")), 2);
+};
+
 //6.30.19
 //https://www.codewars.com/kata/586f6741c66d18c22800010a/train/javascript
 function sequenceSum(begin, end, step) {
