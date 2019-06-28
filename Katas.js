@@ -277,19 +277,3 @@ function removeSmallest(numbers) {
 const binaryArrayToNumber = arr => {
   return parseInt(Number(arr.join("")), 2);
 };
-
-//6.30.19
-//https://www.codewars.com/kata/586f6741c66d18c22800010a/train/javascript
-function sequenceSum(begin, end, step) {
-  let arr = [];
-  for (let i = begin; i <= end; i += step) {
-    arr.push(i);
-  }
-  console.log(arr);
-  let res = arr.reduce((a, b) => a + b);
-  if (arr.length === 0) {
-    return a;
-  } else {
-    return res;
-  }
-}
