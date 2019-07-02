@@ -302,3 +302,17 @@ var findDigit = function(num, nth) {
   if (nth > arr.length) return 0;
   return Number(arr[arr.length - nth]);
 };
+//7.2.19
+//https://www.codewars.com/kata/isograms/train/javascript
+function isIsogram(str) {
+  var i, j;
+  str = str.toLowerCase();
+  for (i = 0; i < str.length; ++i) {
+    for (j = i + 1; j < str.length; ++j) {
+      if (str[i] === str[j]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
