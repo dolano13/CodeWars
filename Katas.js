@@ -316,3 +316,31 @@ function isIsogram(str) {
   }
   return true;
 }
+//7.3.19
+function Fighter(name, health, damagePerAttack) {
+  this.name = name;
+  this.health = health;
+  this.damagePerAttack = damagePerAttack;
+  this.toString = function() {
+    return this.name;
+  };
+}
+
+function Winner(fighter1, fighter2, firstAttacker) {
+  var i = 0;
+  if (firstAttacker === fighter1.name) {
+    i = 1;
+  }
+  for (i; fighter1.health > 0 && fighter2.health > 0; i++) {
+    if (i % 2 === 0) {
+      fighter1.health -= fighter2.damagePerAttack;
+    } else {
+      fighter2.health -= fighter1.damagePerAttack;
+    }
+  }
+  if (fighter1.health > 0) {
+    return fighter1.name;
+  } else {
+    return fighter2.name;
+  }
+}
