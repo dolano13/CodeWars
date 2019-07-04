@@ -317,6 +317,7 @@ function isIsogram(str) {
   return true;
 }
 //7.3.19
+//https://www.codewars.com/kata/577bd8d4ae2807c64b00045b/train/javascript
 function Fighter(name, health, damagePerAttack) {
   this.name = name;
   this.health = health;
@@ -343,4 +344,12 @@ function Winner(fighter1, fighter2, firstAttacker) {
   } else {
     return fighter2.name;
   }
+}
+//7.4.19
+//https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/javascript
+function reverseLetter(str) {
+  return str
+    .match(/[a-z]/gi)
+    .reverse()
+    .join("");
 }
