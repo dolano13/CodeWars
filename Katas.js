@@ -388,15 +388,16 @@ function alphabetWar(fight) {
     return "Let's fight again!";
   }
 }
+//7.6.19
 //https://www.codewars.com/kata/sum-of-triangular-numbers/train/javascript
 function sumTriangularNumbers(n) {
-  let sum = 0;
+  let total = 0;
   if (n < 1) {
     return 0;
   } else {
     for (let i = n; i > 0; i--) {
-      sum = sum + 0.5 * (i * i + i);
+      total = total + 0.5 * (i * i + i);
     }
-    return sum;
+    return total;
   }
 }
