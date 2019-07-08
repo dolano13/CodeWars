@@ -401,7 +401,7 @@ function sumTriangularNumbers(n) {
     return total;
   }
 }
-//7.7.18
+//7.7.19
 //https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript
 function getMiddle(s) {
   if (s.length % 2 === 0) {
@@ -409,4 +409,14 @@ function getMiddle(s) {
   } else {
     return s[Math.floor(s.length / 2)];
   }
+}
+//7.8.19
+//https://www.codewars.com/kata/find-the-vowels/train/javascript
+function vowelIndices(word) {
+  word = word.toLowerCase();
+  var vowels = [];
+  for (i = 0; i < word.length; i++) {
+    if ("aeiouy".indexOf(word[i]) !== -1) vowels.push(i + 1);
+  }
+  return vowels;
 }
